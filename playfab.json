@@ -282,7 +282,7 @@
 
 		{
 			"id": "admin-AddNews",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/AddNews",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -296,7 +296,7 @@
 		},
 		{
 			"id": "admin-AddServerBuild",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/AddServerBuild",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -310,7 +310,7 @@
 		},
 		{
 			"id": "admin-AddUserVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/AddUserVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -324,7 +324,7 @@
 		},
 		{
 			"id": "admin-AddVirtualCurrencyTypes",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/AddVirtualCurrencyTypes",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -338,7 +338,7 @@
 		},
 		{
 			"id": "admin-DeleteContent",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/DeleteContent",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -352,7 +352,7 @@
 		},
 		{
 			"id": "admin-DeleteUsers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/DeleteUsers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -366,7 +366,7 @@
 		},
 		{
 			"id": "admin-GetCatalogItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetCatalogItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -380,7 +380,7 @@
 		},
 		{
 			"id": "admin-GetCloudScriptRevision",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetCloudScriptRevision",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -394,7 +394,7 @@
 		},
 		{
 			"id": "admin-GetCloudScriptVersions",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetCloudScriptVersions",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -408,7 +408,7 @@
 		},
 		{
 			"id": "admin-GetContentList",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetContentList",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -422,7 +422,7 @@
 		},
 		{
 			"id": "admin-GetContentUploadUrl",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetContentUploadUrl",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -436,7 +436,7 @@
 		},
 		{
 			"id": "admin-GetDataReport",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetDataReport",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -450,7 +450,7 @@
 		},
 		{
 			"id": "admin-GetMatchmakerGameInfo",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetMatchmakerGameInfo",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -464,7 +464,7 @@
 		},
 		{
 			"id": "admin-GetMatchmakerGameModes",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetMatchmakerGameModes",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -478,7 +478,7 @@
 		},
 		{
 			"id": "admin-GetPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -492,7 +492,7 @@
 		},
 		{
 			"id": "admin-GetRandomResultTables",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetRandomResultTables",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -520,7 +520,7 @@
 		},
 		{
 			"id": "admin-GetServerBuildUploadUrl",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetServerBuildUploadUrl",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -534,7 +534,7 @@
 		},
 		{
 			"id": "admin-GetStoreItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetStoreItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -548,7 +548,7 @@
 		},
 		{
 			"id": "admin-GetTitleData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetTitleData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -562,7 +562,7 @@
 		},
 		{
 			"id": "admin-GetUserAccountInfo",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserAccountInfo",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -576,7 +576,7 @@
 		},
 		{
 			"id": "admin-GetUserData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -590,7 +590,7 @@
 		},
 		{
 			"id": "admin-GetUserInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -604,7 +604,7 @@
 		},
 		{
 			"id": "admin-GetUserInventory",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserInventory",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -618,7 +618,7 @@
 		},
 		{
 			"id": "admin-GetUserPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -632,7 +632,7 @@
 		},
 		{
 			"id": "admin-GetUserPublisherInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserPublisherInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -646,7 +646,7 @@
 		},
 		{
 			"id": "admin-GetUserPublisherReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserPublisherReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -660,7 +660,7 @@
 		},
 		{
 			"id": "admin-GetUserReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetUserReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -674,7 +674,7 @@
 		},
 		{
 			"id": "admin-GrantItemsToUsers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GrantItemsToUsers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -688,7 +688,7 @@
 		},
 		{
 			"id": "admin-ListServerBuilds",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ListServerBuilds",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -702,7 +702,7 @@
 		},
 		{
 			"id": "admin-ListVirtualCurrencyTypes",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ListVirtualCurrencyTypes",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -716,7 +716,7 @@
 		},
 		{
 			"id": "admin-ModifyMatchmakerGameModes",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ModifyMatchmakerGameModes",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -730,7 +730,7 @@
 		},
 		{
 			"id": "admin-ModifyServerBuild",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ModifyServerBuild",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -744,7 +744,7 @@
 		},
 		{
 			"id": "admin-RemoveServerBuild",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/RemoveServerBuild",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -758,7 +758,7 @@
 		},
 		{
 			"id": "admin-ResetCharacterStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ResetCharacterStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -772,7 +772,7 @@
 		},
 		{
 			"id": "admin-ResetUserStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ResetUserStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -786,7 +786,7 @@
 		},
 		{
 			"id": "admin-ResetUsers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/ResetUsers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -800,7 +800,7 @@
 		},
 		{
 			"id": "admin-RevokeInventoryItem",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/RevokeInventoryItem",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -814,7 +814,7 @@
 		},
 		{
 			"id": "admin-SendAccountRecoveryEmail",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SendAccountRecoveryEmail",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -828,7 +828,7 @@
 		},
 		{
 			"id": "admin-SetCatalogItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetCatalogItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -842,7 +842,7 @@
 		},
 		{
 			"id": "admin-SetPublishedRevision",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetPublishedRevision",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -856,7 +856,7 @@
 		},
 		{
 			"id": "admin-SetPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -870,7 +870,7 @@
 		},
 		{
 			"id": "admin-SetStoreItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetStoreItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -884,7 +884,7 @@
 		},
 		{
 			"id": "admin-SetTitleData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetTitleData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -898,7 +898,7 @@
 		},
 		{
 			"id": "admin-SetupPushNotification",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SetupPushNotification",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -912,7 +912,7 @@
 		},
 		{
 			"id": "admin-SubtractUserVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/SubtractUserVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -926,7 +926,7 @@
 		},
 		{
 			"id": "admin-UpdateCatalogItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateCatalogItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -940,7 +940,7 @@
 		},
 		{
 			"id": "admin-UpdateCloudScript",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateCloudScript",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -954,7 +954,7 @@
 		},
 		{
 			"id": "admin-UpdateRandomResultTables",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateRandomResultTables",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -968,7 +968,7 @@
 		},
 		{
 			"id": "admin-UpdateStoreItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateStoreItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -982,7 +982,7 @@
 		},
 		{
 			"id": "admin-UpdateUserData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -996,7 +996,7 @@
 		},
 		{
 			"id": "admin-UpdateUserInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1010,7 +1010,7 @@
 		},
 		{
 			"id": "admin-UpdateUserPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1024,7 +1024,7 @@
 		},
 		{
 			"id": "admin-UpdateUserPublisherInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserPublisherInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1038,7 +1038,7 @@
 		},
 		{
 			"id": "admin-UpdateUserPublisherReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserPublisherReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1052,7 +1052,7 @@
 		},
 		{
 			"id": "admin-UpdateUserReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1066,7 +1066,7 @@
 		},
 		{
 			"id": "admin-UpdateUserTitleDisplayName",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdateUserTitleDisplayName",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1081,7 +1081,7 @@
 
 		{
 			"id": "matchmaker-AuthUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Matchmaker/AuthUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1095,7 +1095,7 @@
 		},
 		{
 			"id": "matchmaker-PlayerJoined",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Matchmaker/PlayerJoined",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1109,7 +1109,7 @@
 		},
 		{
 			"id": "matchmaker-PlayerLeft",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Matchmaker/PlayerLeft",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1123,7 +1123,7 @@
 		},
 		{
 			"id": "matchmaker-StartGame",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Matchmaker/StartGame",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1137,7 +1137,7 @@
 		},
 		{
 			"id": "matchmaker-UserInfo",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Matchmaker/UserInfo",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1152,7 +1152,7 @@
 
 		{
 			"id": "server-AddCharacterVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AddCharacterVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1166,7 +1166,7 @@
 		},
 		{
 			"id": "server-AddSharedGroupMembers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AddSharedGroupMembers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1180,7 +1180,7 @@
 		},
 		{
 			"id": "server-AddUserVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AddUserVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1194,7 +1194,7 @@
 		},
 		{
 			"id": "server-AuthenticateSessionTicket",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AuthenticateSessionTicket",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1208,7 +1208,7 @@
 		},
 		{
 			"id": "server-AwardSteamAchievement",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AwardSteamAchievement",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1222,7 +1222,7 @@
 		},
 		{
 			"id": "server-CreateSharedGroup",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/CreateSharedGroup",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1236,7 +1236,7 @@
 		},
 		{
 			"id": "server-DeleteCharacterFromUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/DeleteCharacterFromUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1250,7 +1250,7 @@
 		},
 		{
 			"id": "server-DeleteSharedGroup",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/DeleteSharedGroup",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1264,7 +1264,7 @@
 		},
 		{
 			"id": "server-GetAllUsersCharacters",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetAllUsersCharacters",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1278,7 +1278,7 @@
 		},
 		{
 			"id": "server-GetCatalogItems",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCatalogItems",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1292,7 +1292,7 @@
 		},
 		{
 			"id": "server-GetCharacterData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1306,7 +1306,7 @@
 		},
 		{
 			"id": "server-GetCharacterInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1320,7 +1320,7 @@
 		},
 		{
 			"id": "server-GetCharacterInventory",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterInventory",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1334,7 +1334,7 @@
 		},
 		{
 			"id": "server-GetCharacterLeaderboard",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterLeaderboard",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1348,7 +1348,7 @@
 		},
 		{
 			"id": "server-GetCharacterReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1362,7 +1362,7 @@
 		},
 		{
 			"id": "server-GetCharacterStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetCharacterStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1376,7 +1376,7 @@
 		},
 		{
 			"id": "server-GetContentDownloadUrl",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetContentDownloadUrl",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1390,7 +1390,7 @@
 		},
 		{
 			"id": "server-GetLeaderboard",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetLeaderboard",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1404,7 +1404,7 @@
 		},
 		{
 			"id": "server-GetLeaderboardAroundCharacter",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetLeaderboardAroundCharacter",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1418,7 +1418,7 @@
 		},
 		{
 			"id": "server-GetLeaderboardAroundUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetLeaderboardAroundUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1432,7 +1432,7 @@
 		},
 		{
 			"id": "server-GetLeaderboardForUserCharacters",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetLeaderboardForUserCharacters",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1446,7 +1446,7 @@
 		},
 		{
 			"id": "server-GetPlayFabIDsFromFacebookIDs",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayFabIDsFromFacebookIDs",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1460,7 +1460,7 @@
 		},
 		{
 			"id": "server-GetPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1474,7 +1474,7 @@
 		},
 		{
 			"id": "server-GetSharedGroupData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetSharedGroupData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1488,7 +1488,7 @@
 		},
 		{
 			"id": "server-GetTitleData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetTitleData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1502,7 +1502,7 @@
 		},
 		{
 			"id": "server-GetTitleInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetTitleInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1516,7 +1516,7 @@
 		},
 		{
 			"id": "server-GetTitleNews",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetTitleNews",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1530,7 +1530,7 @@
 		},
 		{
 			"id": "server-GetUserAccountInfo",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserAccountInfo",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1544,7 +1544,7 @@
 		},
 		{
 			"id": "server-GetUserData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1558,7 +1558,7 @@
 		},
 		{
 			"id": "server-GetUserInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1572,7 +1572,7 @@
 		},
 		{
 			"id": "server-GetUserInventory",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserInventory",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1586,7 +1586,7 @@
 		},
 		{
 			"id": "server-GetUserPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1600,7 +1600,7 @@
 		},
 		{
 			"id": "server-GetUserPublisherInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserPublisherInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1614,7 +1614,7 @@
 		},
 		{
 			"id": "server-GetUserPublisherReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserPublisherReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1628,7 +1628,7 @@
 		},
 		{
 			"id": "server-GetUserReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1642,7 +1642,7 @@
 		},
 		{
 			"id": "server-GetUserStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetUserStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1656,7 +1656,7 @@
 		},
 		{
 			"id": "server-GrantCharacterToUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GrantCharacterToUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1670,7 +1670,7 @@
 		},
 		{
 			"id": "server-GrantItemsToCharacter",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GrantItemsToCharacter",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1684,7 +1684,7 @@
 		},
 		{
 			"id": "server-GrantItemsToUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GrantItemsToUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1698,7 +1698,7 @@
 		},
 		{
 			"id": "server-GrantItemsToUsers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GrantItemsToUsers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1712,7 +1712,7 @@
 		},
 		{
 			"id": "server-LogEvent",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/LogEvent",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1726,7 +1726,7 @@
 		},
 		{
 			"id": "server-ModifyItemUses",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/ModifyItemUses",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1740,7 +1740,7 @@
 		},
 		{
 			"id": "server-MoveItemToCharacterFromCharacter",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/MoveItemToCharacterFromCharacter",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1754,7 +1754,7 @@
 		},
 		{
 			"id": "server-MoveItemToCharacterFromUser",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/MoveItemToCharacterFromUser",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1768,7 +1768,7 @@
 		},
 		{
 			"id": "server-MoveItemToUserFromCharacter",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/MoveItemToUserFromCharacter",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1782,7 +1782,7 @@
 		},
 		{
 			"id": "server-NotifyMatchmakerPlayerLeft",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/NotifyMatchmakerPlayerLeft",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1796,7 +1796,7 @@
 		},
 		{
 			"id": "server-RedeemCoupon",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/RedeemCoupon",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1810,7 +1810,7 @@
 		},
 		{
 			"id": "server-RedeemMatchmakerTicket",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/RedeemMatchmakerTicket",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1824,7 +1824,7 @@
 		},
 		{
 			"id": "server-RemoveSharedGroupMembers",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/RemoveSharedGroupMembers",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1838,7 +1838,7 @@
 		},
 		{
 			"id": "server-ReportPlayer",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/ReportPlayer",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1852,7 +1852,7 @@
 		},
 		{
 			"id": "server-SendPushNotification",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SendPushNotification",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1866,7 +1866,7 @@
 		},
 		{
 			"id": "server-SetPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SetPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1880,7 +1880,7 @@
 		},
 		{
 			"id": "server-SetTitleData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SetTitleData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1894,7 +1894,7 @@
 		},
 		{
 			"id": "server-SetTitleInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SetTitleInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1908,7 +1908,7 @@
 		},
 		{
 			"id": "server-SubtractCharacterVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SubtractCharacterVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1922,7 +1922,7 @@
 		},
 		{
 			"id": "server-SubtractUserVirtualCurrency",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/SubtractUserVirtualCurrency",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1936,7 +1936,7 @@
 		},
 		{
 			"id": "server-UpdateCharacterData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateCharacterData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1950,7 +1950,7 @@
 		},
 		{
 			"id": "server-UpdateCharacterInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateCharacterInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1964,7 +1964,7 @@
 		},
 		{
 			"id": "server-UpdateCharacterReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateCharacterReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1978,7 +1978,7 @@
 		},
 		{
 			"id": "server-UpdateCharacterStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateCharacterStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -1992,7 +1992,7 @@
 		},
 		{
 			"id": "server-UpdateSharedGroupData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateSharedGroupData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2006,7 +2006,7 @@
 		},
 		{
 			"id": "server-UpdateUserData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2020,7 +2020,7 @@
 		},
 		{
 			"id": "server-UpdateUserInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2034,7 +2034,7 @@
 		},
 		{
 			"id": "server-UpdateUserInventoryItemCustomData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserInventoryItemCustomData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2048,7 +2048,7 @@
 		},
 		{
 			"id": "server-UpdateUserPublisherData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserPublisherData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2062,7 +2062,7 @@
 		},
 		{
 			"id": "server-UpdateUserPublisherInternalData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserPublisherInternalData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2076,7 +2076,7 @@
 		},
 		{
 			"id": "server-UpdateUserPublisherReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserPublisherReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2090,7 +2090,7 @@
 		},
 		{
 			"id": "server-UpdateUserReadOnlyData",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserReadOnlyData",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
@@ -2104,7 +2104,7 @@
 		},
 		{
 			"id": "server-UpdateUserStatistics",
-			"headers": "Content-Type: application/json\nSecretKey: {{SecretKey}}\n",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateUserStatistics",
 			"method": "POST",
 			"collectionId": "PlayFabPostmanSDK-0.1.151116",
