@@ -193,6 +193,7 @@
 				"client-GetContentDownloadUrl",
 				"client-GetCurrentGames",
 				"client-GetFriendLeaderboard",
+				"client-GetFriendLeaderboardAroundCurrentUser",
 				"client-GetFriendsList",
 				"client-GetGameServerRegions",
 				"client-GetLeaderboard",
@@ -233,6 +234,7 @@
 				"client-LoginWithCustomID",
 				"client-LoginWithEmailAddress",
 				"client-LoginWithFacebook",
+				"client-LoginWithGameCenter",
 				"client-LoginWithGoogleAccount",
 				"client-LoginWithIOSDeviceID",
 				"client-LoginWithKongregate",
@@ -2412,6 +2414,20 @@
 			"rawModeData": "{\n  \"StatisticName\": \"Kills\",\n  \"StartPosition\": 1258,\n  \"MaxResultsCount\": 20,\n  \"IncludeSteamFriends\": false\n}"
 		},
 		{
+			"id": "client-GetFriendLeaderboardAroundCurrentUser",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetFriendLeaderboardAroundCurrentUser",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.3.151130",
+			"dataMode": "raw",
+			"name": "GetFriendLeaderboardAroundCurrentUser",
+			"description": "Retrieves a list of ranked friends of the current player for the given statistic, centered on the currently signed-in user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetFriendLeaderboardAroundCurrentUser\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticName\": Statistic used to rank players for this leaderboard.\n\n\"MaxResultsCount\": Maximum number of entries to retrieve.\n\n\"IncludeSteamFriends\": Indicates whether Steam service friends should be included in the response. Default is true.\n\n\"IncludeFacebookFriends\": Indicates whether Facebook friends should be included in the response. Default is true.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"StatisticName\": \"Kills\",\n  \"MaxResultsCount\": 20\n}"
+		},
+		{
 			"id": "client-GetFriendsList",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/GetFriendsList",
@@ -2970,6 +2986,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"TitleId\": \"1\",\n  \"AccessToken\": \"FaceAccessTokenID\",\n  \"CreateAccount\": false\n}"
+		},
+		{
+			"id": "client-LoginWithGameCenter",
+			"headers": "Content-Type: application/json\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/LoginWithGameCenter",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.3.151130",
+			"dataMode": "raw",
+			"name": "LoginWithGameCenter",
+			"description": "Signs the user in using an iOS Game Center player identifier, returning a session identifier that can subsequently be used for API calls which require an authenticated user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/LoginWithGameCenter\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"TitleId\": Unique identifier for the title, found in the Settings > Game Properties section of the PlayFab developer site when a title has been selected\n\n\"PlayerId\": Unique Game Center player id.\n\n\"CreateAccount\": Automatically create a PlayFab account if one is not currently linked to this Game Center id.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"TitleId\": \"1000\",\n  \"PlayerId\": \"pachycephalosaurus01\",\n  \"CreateAccount\": false\n}"
 		},
 		{
 			"id": "client-LoginWithGoogleAccount",
