@@ -178,6 +178,7 @@
 				"client-AddUserVirtualCurrency",
 				"client-AddUsernamePassword",
 				"client-AndroidDevicePushNotificationRegistration",
+				"client-AttributeInstall",
 				"client-CancelTrade",
 				"client-ConfirmPurchase",
 				"client-ConsumeItem",
@@ -2202,6 +2203,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"DeviceToken\": \"59872d98fa632brn8hg3770\",\n  \"SendPushNotificationConfirmation\": true,\n  \"ConfirmationMessege\": \"Welcome to PlayFab!\"\n}"
+		},
+		{
+			"id": "client-AttributeInstall",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/AttributeInstall",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.3.151130",
+			"dataMode": "raw",
+			"name": "AttributeInstall",
+			"description": "Attributes an install for advertisment.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/AttributeInstall\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"Idfa\": The IdentifierForAdvertisers for iOS Devices.\n\n\"Android_Id\": The Android Id for this Android device.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"Idfa\": \"11098810\"\n}"
 		},
 		{
 			"id": "client-CancelTrade",
