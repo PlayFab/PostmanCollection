@@ -101,6 +101,7 @@
 				"server-CreateSharedGroup",
 				"server-DeleteCharacterFromUser",
 				"server-DeleteSharedGroup",
+				"server-DeleteUsers",
 				"server-GetAllUsersCharacters",
 				"server-GetCatalogItems",
 				"server-GetCharacterData",
@@ -1264,6 +1265,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"SharedGroupId\": \"Clan Data\"\n}"
+		},
+		{
+			"id": "server-DeleteUsers",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/DeleteUsers",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.3.151130",
+			"dataMode": "raw",
+			"name": "DeleteUsers",
+			"description": "Deletes the users for the provided game. Deletes custom data, all account linkages, and statistics.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/DeleteUsers\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabIds\": An array of unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"TitleId\": Unique identifier for the title, found in the Settings > Game Properties section of the PlayFab developer site when a title has been selected\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\"PlayFabIds\": \"String\",\"TitleId\": \"{{TitleId}}\"}"
 		},
 		{
 			"id": "server-GetAllUsersCharacters",
