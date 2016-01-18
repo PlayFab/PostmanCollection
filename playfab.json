@@ -144,6 +144,7 @@
 				"server-RedeemMatchmakerTicket",
 				"server-RemoveSharedGroupMembers",
 				"server-ReportPlayer",
+				"server-RevokeInventoryItem",
 				"server-SendPushNotification",
 				"server-SetPublisherData",
 				"server-SetTitleData",
@@ -822,7 +823,7 @@
 			"collectionId": "PlayFabPostmanSDK-0.5.160118",
 			"dataMode": "raw",
 			"name": "RevokeInventoryItem",
-			"description": "Revokes access to an item in a user's inventory\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/RevokeInventoryItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": unique PlayFab identifier for the user account which is to have the specified item removed\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ItemInstanceId\": unique PlayFab identifier for the item instance to be removed\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"description": "Revokes access to an item in a user's inventory\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/RevokeInventoryItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ItemInstanceId\": Unique PlayFab assigned instance identifier of the item\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
@@ -1879,6 +1880,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"ReporterId\": \"9ddafe27d6d445da\",\n  \"ReporteeId\": \"1a46086aed40f142\",\n  \"TitleId\": \"06dd\",\n  \"Comment\": \"cheating\"\n}"
+		},
+		{
+			"id": "server-RevokeInventoryItem",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/RevokeInventoryItem",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.5.160118",
+			"dataMode": "raw",
+			"name": "RevokeInventoryItem",
+			"description": "Revokes access to an item in a user's inventory\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/RevokeInventoryItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ItemInstanceId\": Unique PlayFab assigned instance identifier of the item\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"203945882\",\n  \"ItemInstanceId\": \"2048583045\"\n}"
 		},
 		{
 			"id": "server-SendPushNotification",
