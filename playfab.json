@@ -193,6 +193,7 @@
 				"client-GetCharacterInventory",
 				"client-GetCharacterLeaderboard",
 				"client-GetCharacterReadOnlyData",
+				"client-GetCharacterStatistics",
 				"client-GetCloudScriptUrl",
 				"client-GetContentDownloadUrl",
 				"client-GetCurrentGames",
@@ -281,6 +282,7 @@
 				"client-UnlinkXboxAccount",
 				"client-UnlockContainerItem",
 				"client-UpdateCharacterData",
+				"client-UpdateCharacterStatistics",
 				"client-UpdateSharedGroupData",
 				"client-UpdateUserData",
 				"client-UpdateUserPublisherData",
@@ -2429,6 +2431,20 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"2039475\",\n  \"CharacterId\": \"98342357\",\n  \"Keys\": [\n    \"preferences\",\n    \"progress\"\n  ]\n}"
 		},
 		{
+			"id": "client-GetCharacterStatistics",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetCharacterStatistics",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.5.160118",
+			"dataMode": "raw",
+			"name": "GetCharacterStatistics",
+			"description": "Retrieves the details of all title-specific statistics for the user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetCharacterStatistics\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"CharacterId\": \"98765432\"\n}"
+		},
+		{
 			"id": "client-GetCloudScriptUrl",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/GetCloudScriptUrl",
@@ -3659,6 +3675,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"CharacterId\": \"98765456\",\n  \"Data\": {\n    \"Class\": \"Fighter\",\n    \"Gender\": \"Female\",\n    \"Icon\": \"Guard 3\",\n    \"Theme\": \"Colorful\"\n  },\n  \"Permission\": \"Public\"\n}"
+		},
+		{
+			"id": "client-UpdateCharacterStatistics",
+			"headers": "Content-Type: application/json\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/UpdateCharacterStatistics",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.5.160118",
+			"dataMode": "raw",
+			"name": "UpdateCharacterStatistics",
+			"description": "Updates the values of the specified title-specific statistics for the specific character\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UpdateCharacterStatistics\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"CharacterStatistics\": Statistics to be updated with the provided values.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"CharacterId\": \"98765432\",\n  \"CharacterStatistics\": {\n    \"Headshots\": 18,\n    \"Kills\": 47\n  }\n}"
 		},
 		{
 			"id": "client-UpdateSharedGroupData",
