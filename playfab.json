@@ -437,7 +437,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
-			"rawModeData": "{\"Prefix\": \"String\"}"
+			"rawModeData": "{\n  \"Prefix\": \"2016/1\"\n}"
 		},
 		{
 			"id": "admin-GetContentUploadUrl",
@@ -927,7 +927,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
-			"rawModeData": "{\"Name\": \"String\",\"Platform\": \"String\",\"Key\": \"String\",\"Credential\": \"String\",\"OverwriteOldARN\": \"Boolean\"}"
+			"rawModeData": "{\n  \"Name\": \"My Game\",\n  \"Platform\": \"APNS_SANDBOX\",\n  \"Key\": \"MyKey123\",\n  \"Credential\": \"MyCredentialsXYZ\",\n  \"OverwriteOldARN\": false\n}"
 		},
 		{
 			"id": "admin-SubtractUserVirtualCurrency",
