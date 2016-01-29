@@ -705,7 +705,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
-			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"Crate 1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"Crate 2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
+			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
 		},
 		{
 			"id": "admin-ListServerBuilds",
@@ -1729,7 +1729,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
-			"rawModeData": "{\n  \"CharacterId\": \"9876543268\",\n  \"PlayFabId\": \"20394883\",\n  \"Annotation\": \"Entered Level 2\",\n  \"ItemIds\": [\n    \"Crate 1\",\n    \"Crate 2\"\n  ]\n}"
+			"rawModeData": "{\n  \"CharacterId\": \"9876543268\",\n  \"PlayFabId\": \"20394883\",\n  \"Annotation\": \"Entered Level 2\",\n  \"ItemIds\": [\n    \"shield_level_5\",\n    \"shield_level_6\"\n  ]\n}"
 		},
 		{
 			"id": "server-GrantItemsToUser",
@@ -1743,7 +1743,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
-			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"Annotation\": \"Entered Level 2\",\n  \"ItemIds\": [\n    \"Crate 1\",\n    \"Crate 2\"\n  ]\n}"
+			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"Annotation\": \"Entered Level 2\",\n  \"ItemIds\": [\n    \"shield_level_3\",\n    \"shield_level_4\"\n  ]\n}"
 		},
 		{
 			"id": "server-GrantItemsToUsers",
@@ -1757,7 +1757,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
-			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"Crate 1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"Crate 2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
+			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
 		},
 		{
 			"id": "server-LogEvent",
