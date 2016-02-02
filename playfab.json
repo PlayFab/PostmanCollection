@@ -2738,7 +2738,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"SteamIDs\": [\n    7498495,\n    9374209\n  ]\n}"
+			"rawModeData": "{\n  \"SteamIDs\": [\n    857498576495,\n    759374651209\n  ]\n}"
 		},
 		{
 			"id": "client-GetPlayerTrades",
