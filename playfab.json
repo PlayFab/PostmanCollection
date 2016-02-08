@@ -152,6 +152,8 @@
 				"server-SetTitleInternalData",
 				"server-SubtractCharacterVirtualCurrency",
 				"server-SubtractUserVirtualCurrency",
+				"server-UnlockContainerInstance",
+				"server-UnlockContainerItem",
 				"server-UpdateCharacterData",
 				"server-UpdateCharacterInternalData",
 				"server-UpdateCharacterReadOnlyData",
@@ -282,6 +284,7 @@
 				"client-UnlinkPSNAccount",
 				"client-UnlinkSteamAccount",
 				"client-UnlinkXboxAccount",
+				"client-UnlockContainerInstance",
 				"client-UnlockContainerItem",
 				"client-UpdateCharacterData",
 				"client-UpdateCharacterStatistics",
@@ -1998,6 +2001,34 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"VirtualCurrency\": \"GC\",\n  \"Amount\": 100\n}"
 		},
 		{
+			"id": "server-UnlockContainerInstance",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/UnlockContainerInstance",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.7.160208",
+			"dataMode": "raw",
+			"name": "UnlockContainerInstance",
+			"description": "Opens a specific container (ContainerItemInstanceId), with a specific key (KeyItemInstanceId, when required), and returns the contents of the opened container. If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/UnlockContainerInstance\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ContainerItemInstanceId\": ItemInstanceId of the container to unlock.\n\n\"KeyItemInstanceId\": ItemInstanceId of the key that will be consumed by unlocking this container.  If the container requires a key, this parameter is required.\n\n\"CatalogVersion\": Specifies the catalog version that should be used to determine container contents.  If unspecified, uses catalog associated with the item instance.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"ContainerItemInstanceId\": \"123456788\",\n  \"KeyItemInstanceId\": \"123456789\"\n}"
+		},
+		{
+			"id": "server-UnlockContainerItem",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/UnlockContainerItem",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.7.160208",
+			"dataMode": "raw",
+			"name": "UnlockContainerItem",
+			"description": "Searches Player or Character inventory for any ItemInstance matching the given CatalogItemId, if necessary unlocks it using any appropriate key, and returns the contents of the opened container. If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/UnlockContainerItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ContainerItemId\": Catalog ItemId of the container type to unlock.\n\n\"CatalogVersion\": Specifies the catalog version that should be used to determine container contents.  If unspecified, uses default/primary catalog.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"ContainerItemId\": \"crate block 1\"\n}"
+		},
+		{
 			"id": "server-UpdateCharacterData",
 			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/UpdateCharacterData",
@@ -3679,6 +3710,20 @@
 			"rawModeData": "{\n  \"XboxToken\": \"XBL3.0 x=1981989841;akljdlkafdknad\"\n}"
 		},
 		{
+			"id": "client-UnlockContainerInstance",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/UnlockContainerInstance",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.7.160208",
+			"dataMode": "raw",
+			"name": "UnlockContainerInstance",
+			"description": "Opens the specified container, with the specified key (when required), and returns the contents of the opened container. If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UnlockContainerInstance\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"ContainerItemInstanceId\": ItemInstanceId of the container to unlock.\n\n\"KeyItemInstanceId\": ItemInstanceId of the key that will be consumed by unlocking this container.  If the container requires a key, this parameter is required.\n\n\"CatalogVersion\": Specifies the catalog version that should be used to determine container contents.  If unspecified, uses catalog associated with the item instance.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"ContainerItemInstanceId\": \"123456788\",\n  \"KeyItemInstanceId\": \"123456789\"\n}"
+		},
+		{
 			"id": "client-UnlockContainerItem",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/UnlockContainerItem",
@@ -3686,11 +3731,11 @@
 			"collectionId": "PlayFabPostmanSDK-0.7.160208",
 			"dataMode": "raw",
 			"name": "UnlockContainerItem",
-			"description": "Unlocks a container item in the user's inventory and consumes a key item of the type indicated by the container item\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UnlockContainerItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"ContainerItemId\": Category ItemId of the container type to unlock.\n\n\"CatalogVersion\": Catalog version of the container.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"description": "Searches target inventory for an ItemInstance matching the given CatalogItemId, if necessary unlocks it using an appropriate key, and returns the contents of the opened container. If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UnlockContainerItem\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"ContainerItemId\": Catalog ItemId of the container type to unlock.\n\n\"CatalogVersion\": Specifies the catalog version that should be used to determine container contents.  If unspecified, uses default/primary catalog.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"ContainerItemId\": \"crate block 1\",\n  \"CatalogVersion\": \"5\"\n}"
+			"rawModeData": "{\n  \"ContainerItemId\": \"crate block 1\"\n}"
 		},
 		{
 			"id": "client-UpdateCharacterData",
