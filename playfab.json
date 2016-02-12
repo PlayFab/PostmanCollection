@@ -407,7 +407,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
-			"rawModeData": "{\"PlayFabIds\": \"String\",\"TitleId\": \"{{TitleId}}\"}"
+			"rawModeData": "{\n  \"PlayFabIds\": [\n    \"203945882\"\n  ],\n  \"TitleId\": \"aaa\"\n}"
 		},
 		{
 			"id": "admin-GetCatalogItems",
@@ -1389,7 +1389,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
-			"rawModeData": "{\"PlayFabIds\": \"String\",\"TitleId\": \"{{TitleId}}\"}"
+			"rawModeData": "{\n  \"PlayFabIds\": [\n    \"203945882\"\n  ],\n  \"TitleId\": \"aaa\"\n}"
 		},
 		{
 			"id": "server-GetAllUsersCharacters",
