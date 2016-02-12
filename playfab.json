@@ -15,6 +15,7 @@
 				"admin-AddServerBuild",
 				"admin-AddUserVirtualCurrency",
 				"admin-AddVirtualCurrencyTypes",
+				"admin-CreatePlayerStatisticDefinition",
 				"admin-DeleteContent",
 				"admin-DeleteUsers",
 				"admin-GetCatalogItems",
@@ -25,6 +26,8 @@
 				"admin-GetDataReport",
 				"admin-GetMatchmakerGameInfo",
 				"admin-GetMatchmakerGameModes",
+				"admin-GetPlayerStatisticDefinitions",
+				"admin-GetPlayerStatisticVersions",
 				"admin-GetPublisherData",
 				"admin-GetRandomResultTables",
 				"admin-GetServerBuildInfo",
@@ -40,6 +43,7 @@
 				"admin-GetUserPublisherReadOnlyData",
 				"admin-GetUserReadOnlyData",
 				"admin-GrantItemsToUsers",
+				"admin-IncrementPlayerStatisticVersion",
 				"admin-ListServerBuilds",
 				"admin-ListVirtualCurrencyTypes",
 				"admin-ModifyMatchmakerGameModes",
@@ -59,6 +63,7 @@
 				"admin-SubtractUserVirtualCurrency",
 				"admin-UpdateCatalogItems",
 				"admin-UpdateCloudScript",
+				"admin-UpdatePlayerStatisticDefinition",
 				"admin-UpdateRandomResultTables",
 				"admin-UpdateStoreItems",
 				"admin-UpdateUserData",
@@ -217,6 +222,7 @@
 				"client-GetPlayFabIDsFromKongregateIDs",
 				"client-GetPlayFabIDsFromPSNAccountIDs",
 				"client-GetPlayFabIDsFromSteamIDs",
+				"client-GetPlayerStatistics",
 				"client-GetPlayerTrades",
 				"client-GetPublisherData",
 				"client-GetPurchase",
@@ -288,6 +294,7 @@
 				"client-UnlockContainerItem",
 				"client-UpdateCharacterData",
 				"client-UpdateCharacterStatistics",
+				"client-UpdatePlayerStatistics",
 				"client-UpdateSharedGroupData",
 				"client-UpdateUserData",
 				"client-UpdateUserPublisherData",
@@ -359,6 +366,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"VirtualCurrencies\": [\n    {\n      \"CurrencyCode\": \"CC\",\n      \"DisplayName\": \"Chump Coins\",\n      \"InitialDeposit\": 100,\n      \"RechargeRate\": 1000,\n      \"RechargeMax\": 1000\n    },\n    {\n      \"CurrencyCode\": \"GC\"\n    }\n  ]\n}"
+		},
+		{
+			"id": "admin-CreatePlayerStatisticDefinition",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/CreatePlayerStatisticDefinition",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "CreatePlayerStatisticDefinition",
+			"description": "Adds a new player statistic configuration to the title, optionally allowing the developer to specify a reset interval.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/CreatePlayerStatisticDefinition\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticName\": unique name of the statistic\n\n\"VersionChangeInterval\": interval at which the values of the statistic for all players are reset (resets begin at the next interval boundary)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"StatisticName\": \"headshots\",\n  \"VersionChangeInterval\": \"Never\"\n}"
 		},
 		{
 			"id": "admin-DeleteContent",
@@ -499,6 +520,34 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"BuildVersion\": \"5.0.1\"\n}"
+		},
+		{
+			"id": "admin-GetPlayerStatisticDefinitions",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayerStatisticDefinitions",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "GetPlayerStatisticDefinitions",
+			"description": "Retrieves the configuration information for all player statistics defined in the title, regardless of whether they have a reset interval.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetPlayerStatisticDefinitions\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{}"
+		},
+		{
+			"id": "admin-GetPlayerStatisticVersions",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayerStatisticVersions",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "GetPlayerStatisticVersions",
+			"description": "Retrieves the information on the available versions of the specified statistic.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetPlayerStatisticVersions\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticName\": unique name of the statistic\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"StatisticName\": \"headshots\"\n}"
 		},
 		{
 			"id": "admin-GetPublisherData",
@@ -709,6 +758,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
+		},
+		{
+			"id": "admin-IncrementPlayerStatisticVersion",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/IncrementPlayerStatisticVersion",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "IncrementPlayerStatisticVersion",
+			"description": "Resets the indicated statistic, removing all player entries for it and backing up the old values.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/IncrementPlayerStatisticVersion\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticName\": unique name of the statistic\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"StatisticName\": \"headshots\"\n}"
 		},
 		{
 			"id": "admin-ListServerBuilds",
@@ -975,6 +1038,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\"Version\": \"Number\",\"Files\": \"Object\"}"
+		},
+		{
+			"id": "admin-UpdatePlayerStatisticDefinition",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/UpdatePlayerStatisticDefinition",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "UpdatePlayerStatisticDefinition",
+			"description": "Updates a player statistic configuration for the title, optionally allowing the developer to specify a reset interval.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/UpdatePlayerStatisticDefinition\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticName\": unique name of the statistic\n\n\"VersionChangeInterval\": interval at which the values of the statistic for all players are reset (changes are effective at the next occurance of the new interval boundary)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"StatisticName\": \"headshots\",\n  \"VersionChangeInterval\": \"Day\"\n}"
 		},
 		{
 			"id": "admin-UpdateRandomResultTables",
@@ -2772,6 +2849,20 @@
 			"rawModeData": "{\n  \"SteamStringIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
 		},
 		{
+			"id": "client-GetPlayerStatistics",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayerStatistics",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "GetPlayerStatistics",
+			"description": "Retrieves the current version and values for the indicated statistics, for the local player.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetPlayerStatistics\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"StatisticNames\": statistics to return\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"StatisticNames\": [\n    \"Points\",\n    \"Wins\"\n  ]\n}"
+		},
+		{
 			"id": "client-GetPlayerTrades",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayerTrades",
@@ -3764,6 +3855,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"CharacterId\": \"98765432\",\n  \"CharacterStatistics\": {\n    \"Headshots\": 18,\n    \"Kills\": 47\n  }\n}"
+		},
+		{
+			"id": "client-UpdatePlayerStatistics",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/UpdatePlayerStatistics",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.8.160208",
+			"dataMode": "raw",
+			"name": "UpdatePlayerStatistics",
+			"description": "Updates the values of the specified title-specific statistics for the user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UpdatePlayerStatistics\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"Statistics\": Statistics to be updated with the provided values\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"Statistics\": [\n    {\n      \"StatisticName\": \"Points\",\n      \"Version\": 1,\n      \"Value\": 600\n    },\n    {\n      \"StatisticName\": \"Wins\",\n      \"Version\": 0,\n      \"Value\": 16\n    },\n    {\n      \"StatisticName\": \"Stars\",\n      \"Value\": 7\n    }\n  ]\n}"
 		},
 		{
 			"id": "client-UpdateSharedGroupData",
