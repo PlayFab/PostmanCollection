@@ -122,6 +122,7 @@
 				"server-GetLeaderboardAroundUser",
 				"server-GetLeaderboardForUserCharacters",
 				"server-GetPlayFabIDsFromFacebookIDs",
+				"server-GetPlayFabIDsFromSteamIDs",
 				"server-GetPublisherData",
 				"server-GetSharedGroupData",
 				"server-GetTitleData",
@@ -1586,6 +1587,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"FacebookIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
+		},
+		{
+			"id": "server-GetPlayFabIDsFromSteamIDs",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayFabIDsFromSteamIDs",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.9.160215",
+			"dataMode": "raw",
+			"name": "GetPlayFabIDsFromSteamIDs",
+			"description": "Retrieves the unique PlayFab identifiers for the given set of Steam identifiers. The Steam identifiers  are the profile IDs for the user accounts, available as SteamId in the Steamworks Community API calls.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetPlayFabIDsFromSteamIDs\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"SteamIDs\": Deprecated: Please use SteamStringIDs\n\n\"SteamStringIDs\": Array of unique Steam identifiers (Steam profile IDs) for which the title needs to get PlayFab identifiers.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"SteamStringIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
 		},
 		{
 			"id": "server-GetPublisherData",
