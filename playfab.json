@@ -195,7 +195,6 @@
 				"client-CancelTrade",
 				"client-ConfirmPurchase",
 				"client-ConsumeItem",
-				"client-ConsumePSNEntitlements",
 				"client-CreateSharedGroup",
 				"client-GetAccountInfo",
 				"client-GetAllUsersCharacters",
@@ -223,7 +222,6 @@
 				"client-GetPlayFabIDsFromGameCenterIDs",
 				"client-GetPlayFabIDsFromGoogleIDs",
 				"client-GetPlayFabIDsFromKongregateIDs",
-				"client-GetPlayFabIDsFromPSNAccountIDs",
 				"client-GetPlayFabIDsFromSteamIDs",
 				"client-GetPlayerStatistics",
 				"client-GetPlayerTrades",
@@ -249,9 +247,7 @@
 				"client-LinkGoogleAccount",
 				"client-LinkIOSDeviceID",
 				"client-LinkKongregate",
-				"client-LinkPSNAccount",
 				"client-LinkSteamAccount",
-				"client-LinkXboxAccount",
 				"client-LogEvent",
 				"client-LoginWithAndroidDeviceID",
 				"client-LoginWithCustomID",
@@ -261,16 +257,13 @@
 				"client-LoginWithGoogleAccount",
 				"client-LoginWithIOSDeviceID",
 				"client-LoginWithKongregate",
-				"client-LoginWithPSN",
 				"client-LoginWithPlayFab",
 				"client-LoginWithSteam",
-				"client-LoginWithXbox",
 				"client-Matchmake",
 				"client-OpenTrade",
 				"client-PayForPurchase",
 				"client-PurchaseItem",
 				"client-RedeemCoupon",
-				"client-RefreshPSNAuthToken",
 				"client-RegisterForIOSPushNotification",
 				"client-RegisterPlayFabUser",
 				"client-RemoveFriend",
@@ -290,9 +283,7 @@
 				"client-UnlinkGoogleAccount",
 				"client-UnlinkIOSDeviceID",
 				"client-UnlinkKongregate",
-				"client-UnlinkPSNAccount",
 				"client-UnlinkSteamAccount",
-				"client-UnlinkXboxAccount",
 				"client-UnlockContainerInstance",
 				"client-UnlockContainerItem",
 				"client-UpdateCharacterData",
@@ -2474,20 +2465,6 @@
 			"rawModeData": "{\n  \"ItemInstanceId\": \"94585729\",\n  \"ConsumeCount\": 1\n}"
 		},
 		{
-			"id": "client-ConsumePSNEntitlements",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/ConsumePSNEntitlements",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "ConsumePSNEntitlements",
-			"description": "Checks for any new consumable entitlements. If any are found, they are consumed and added as PlayFab items\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/ConsumePSNEntitlements\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"CatalogVersion\": Which catalog to match granted entitlements against. If null, defaults to title default catalog\n\n\"ServiceLabel\": Id of the PSN service label to consume entitlements from\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"ServiceLabel\": 1\n}"
-		},
-		{
 			"id": "client-CreateSharedGroup",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/CreateSharedGroup",
@@ -2866,20 +2843,6 @@
 			"rawModeData": "{\n  \"KongregateIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
 		},
 		{
-			"id": "client-GetPlayFabIDsFromPSNAccountIDs",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayFabIDsFromPSNAccountIDs",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "GetPlayFabIDsFromPSNAccountIDs",
-			"description": "Retrieves the unique PlayFab identifiers for the given set of PlayStation Network identifiers.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetPlayFabIDsFromPSNAccountIDs\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PSNAccountIDs\": Array of unique PlayStation Network identifiers for which the title needs to get PlayFab identifiers.\n\n\"IssuerId\": Id of the PSN issuer environment. If null, defaults to 256 (production)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"PSNAccountIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
-		},
-		{
 			"id": "client-GetPlayFabIDsFromSteamIDs",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayFabIDsFromSteamIDs",
@@ -3230,20 +3193,6 @@
 			"rawModeData": "{\n  \"KongregateId\": \"457332\",\n  \"AuthTicket\": \"{123-456-78931212}\"\n}"
 		},
 		{
-			"id": "client-LinkPSNAccount",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/LinkPSNAccount",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "LinkPSNAccount",
-			"description": "Links the PlayStation Network account associated with the provided access code to the user's PlayFab account\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/LinkPSNAccount\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"AuthCode\": Authentication code provided by the PlayStation Network.\n\n\"RedirectUri\": Redirect URI supplied to PSN when requesting an auth code\n\n\"IssuerId\": Id of the PSN issuer environment. If null, defaults to 256 (production)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"AuthCode\": \"LKJDG7DDE\",\n  \"RedirectUri\": \"orbis://games\"\n}"
-		},
-		{
 			"id": "client-LinkSteamAccount",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/LinkSteamAccount",
@@ -3256,20 +3205,6 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"SteamTicket\": \"steamTicketID\"\n}"
-		},
-		{
-			"id": "client-LinkXboxAccount",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/LinkXboxAccount",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "LinkXboxAccount",
-			"description": "Links the Xbox Live account associated with the provided access code to the user's PlayFab account\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/LinkXboxAccount\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"XboxToken\": Token provided by the Xbox Live SDK/XDK method GetTokenAndSignatureAsync(\"POST\", \"https://playfabapi.com\", \"\").\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"XboxToken\": \"XBL3.0 x=1981989841;akljdlkafdknad\"\n}"
 		},
 		{
 			"id": "client-LogEvent",
@@ -3398,20 +3333,6 @@
 			"rawModeData": "{\n  \"TitleId\": \"123\",\n  \"KongregateId\": \"457332\",\n  \"AuthTicket\": \"SomeKongregateTokenHere\",\n  \"CreateAccount\": false\n}"
 		},
 		{
-			"id": "client-LoginWithPSN",
-			"headers": "Content-Type: application/json\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/LoginWithPSN",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "LoginWithPSN",
-			"description": "Signs the user in using a PlayStation Network authentication code, returning a session identifier that can subsequently be used for API calls which require an authenticated user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/LoginWithPSN\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"TitleId\": Unique identifier for the title, found in the Settings > Game Properties section of the PlayFab developer site when a title has been selected\n\n\"AuthCode\": Auth code provided by the PSN OAuth provider.\n\n\"RedirectUri\": Redirect URI supplied to PSN when requesting an auth code\n\n\"IssuerId\": Id of the PSN issuer environment. If null, defaults to 256 (production)\n\n\"CreateAccount\": Automatically create a PlayFab account if one is not currently linked to this PSN account.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"TitleId\": \"1\",\n  \"AuthCode\": \"LKJ6D896D\",\n  \"RedirectUri\": \"orbis://games\",\n  \"CreateAccount\": false\n}"
-		},
-		{
 			"id": "client-LoginWithPlayFab",
 			"headers": "Content-Type: application/json\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/LoginWithPlayFab",
@@ -3438,20 +3359,6 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"TitleId\": \"1\",\n  \"SteamTicket\": \"steamTicketID\",\n  \"CreateAccount\": false\n}"
-		},
-		{
-			"id": "client-LoginWithXbox",
-			"headers": "Content-Type: application/json\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/LoginWithXbox",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "LoginWithXbox",
-			"description": "Signs the user in using a Xbox Live Token, returning a session identifier that can subsequently be used for API calls which require an authenticated user\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/LoginWithXbox\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"TitleId\": Unique identifier for the title, found in the Settings > Game Properties section of the PlayFab developer site when a title has been selected\n\n\"XboxToken\": Token provided by the Xbox Live SDK/XDK method GetTokenAndSignatureAsync(\"POST\", \"https://playfabapi.com\", \"\").\n\n\"CreateAccount\": Automatically create a PlayFab account if one is not currently linked to this Xbox Live account.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"TitleId\": \"1\",\n  \"XboxToken\": \"XBL3.0 x=1981989841;akljdlkafdknad\",\n  \"CreateAccount\": false\n}"
 		},
 		{
 			"id": "client-Matchmake",
@@ -3522,20 +3429,6 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"CouponCode\": \"123-1234-123\",\n  \"CatalogVersion\": \"5\"\n}"
-		},
-		{
-			"id": "client-RefreshPSNAuthToken",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/RefreshPSNAuthToken",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "RefreshPSNAuthToken",
-			"description": "Uses the supplied OAuth code to refresh the internally cached player PSN auth token\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/RefreshPSNAuthToken\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"AuthCode\": Auth code returned by PSN OAuth system.\n\n\"RedirectUri\": Redirect URI supplied to PSN when requesting an auth code\n\n\"IssuerId\": Id of the PSN issuer environment. If null, defaults to 256 (production)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"AuthCode\": \"LKJDG7DDE\",\n  \"RedirectUri\": \"orbis://games\"\n}"
 		},
 		{
 			"id": "client-RegisterForIOSPushNotification",
@@ -3804,20 +3697,6 @@
 			"rawModeData": "{}"
 		},
 		{
-			"id": "client-UnlinkPSNAccount",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/UnlinkPSNAccount",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "UnlinkPSNAccount",
-			"description": "Unlinks the related PSN account from the user's PlayFab account\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UnlinkPSNAccount\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{}"
-		},
-		{
 			"id": "client-UnlinkSteamAccount",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/UnlinkSteamAccount",
@@ -3830,20 +3709,6 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{}"
-		},
-		{
-			"id": "client-UnlinkXboxAccount",
-			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
-			"url": "https://{{TitleId}}.playfabapi.com/Client/UnlinkXboxAccount",
-			"method": "POST",
-			"collectionId": "PlayFabPostmanSDK-0.10.160222",
-			"dataMode": "raw",
-			"name": "UnlinkXboxAccount",
-			"description": "Unlinks the related Xbox Live account from the user's PlayFab account\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/UnlinkXboxAccount\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"XboxToken\": Token provided by the Xbox Live SDK/XDK method GetTokenAndSignatureAsync(\"POST\", \"https://playfabapi.com\", \"\").\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-			"descriptionFormat": "html",
-			"currentHelper": "normal",
-			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"XboxToken\": \"XBL3.0 x=1981989841;akljdlkafdknad\"\n}"
 		},
 		{
 			"id": "client-UnlockContainerInstance",
