@@ -108,6 +108,7 @@
 				"server-DeleteCharacterFromUser",
 				"server-DeleteSharedGroup",
 				"server-DeleteUsers",
+				"server-ExecuteCloudScript",
 				"server-GetAllUsersCharacters",
 				"server-GetCatalogItems",
 				"server-GetCharacterData",
@@ -1387,6 +1388,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"PlayFabIds\": [\n    \"203945882\"\n  ],\n  \"TitleId\": \"aaa\"\n}"
+		},
+		{
+			"id": "server-ExecuteCloudScript",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/ExecuteCloudScript",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.12.160328",
+			"dataMode": "raw",
+			"name": "ExecuteCloudScript",
+			"description": "Executes a CloudScript function, with the 'currentPlayerId' variable set to the specified PlayFabId parameter value.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/ExecuteCloudScript\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"FunctionName\": The name of the CloudScript function to execute\n\n\"FunctionParameter\": Object that is passed in to the function as the first argument\n\n\"RevisionSelection\": Option for which revision of the CloudScript to execute. 'Latest' executes the most recently created revision, 'Live' executes the current live, published revision, and 'Specific' executes the specified revision.\n\n\"SpecificRevision\": The specivic revision to execute, when RevisionSelection is set to 'Specific'\n\n\"GeneratePlayStreamEvent\": Generate a 'player_executed_cloudscript' PlayStream event containing the results of the function execution and other contextual information. This event will show up in the PlayStream debugger console for the player in Game Manager.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"1337D00D\",\n  \"FunctionName\": \"levelCompleted\",\n  \"FunctionParameter\": {\n    \"level\": 3,\n    \"points\": 400\n  },\n  \"RevisionSelection\": \"Live\",\n  \"GeneratePlayStreamEvent\": true\n}"
 		},
 		{
 			"id": "server-GetAllUsersCharacters",
