@@ -176,7 +176,10 @@
 				"server-UpdateUserPublisherInternalData",
 				"server-UpdateUserPublisherReadOnlyData",
 				"server-UpdateUserReadOnlyData",
-				"server-UpdateUserStatistics"
+				"server-UpdateUserStatistics",
+				"server-WriteCharacterEvent",
+				"server-WritePlayerEvent",
+				"server-WriteTitleEvent"
 			],
 			"collection_name": "PlayFab Postman SDK",
 			"collection_id": "PlayFabPostmanSDK-0.13.160411"
@@ -300,7 +303,10 @@
 				"client-UpdateUserTitleDisplayName",
 				"client-ValidateAmazonIAPReceipt",
 				"client-ValidateGooglePlayPurchase",
-				"client-ValidateIOSReceipt"
+				"client-ValidateIOSReceipt",
+				"client-WriteCharacterEvent",
+				"client-WritePlayerEvent",
+				"client-WriteTitleEvent"
 			],
 			"collection_name": "PlayFab Postman SDK",
 			"collection_id": "PlayFabPostmanSDK-0.13.160411"
@@ -2355,6 +2361,48 @@
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"UserStatistics\": {\n    \"Headshots\": 18,\n    \"Kills\": 47\n  }\n}"
 		},
+		{
+			"id": "server-WriteCharacterEvent",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/WriteCharacterEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WriteCharacterEvent",
+			"description": "Writes a character-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/WriteCharacterEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of now in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"54335785\",\n  \"CharacterId\": \"975378\",\n  \"EventName\": \"CharacterLevelUpEvent\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"Level\": \"10\",\n  \"Exp\": \"55\"\n}"
+		},
+		{
+			"id": "server-WritePlayerEvent",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/WritePlayerEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WritePlayerEvent",
+			"description": "Writes a player-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/WritePlayerEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of 'now' in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"654997\",\n  \"EventName\": \"ForumPostEvent\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"Subject\": \"My First Post\",\n  \"Body\": \"This is my awesome post.\"\n}"
+		},
+		{
+			"id": "server-WriteTitleEvent",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/WriteTitleEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WriteTitleEvent",
+			"description": "Writes a title-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/WriteTitleEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of now in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"EventName\": \"ClientUpdated\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"NewVersion\": \"1.4.50\"\n}"
+		},
 
 		{
 			"id": "client-AcceptTrade",
@@ -3951,6 +3999,48 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"ReceiptData\": \"MTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3Nzc3NzcNCjg4DQo5OTk5OTk5OTk5OTkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3NzcNCjg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4DQo5DQpBcHBsZSBJbmMuIFdvcmxkd2lkZSBEZXZlbG9wZXIgUmVsYXRpb25zIENlcnRpZmljYXRpb24gQXV0aG9yaXR5IChub3QgcmVhbGx5IC0gZmFrZSBQbGF5RmFiIGV4YW1wbGUsIGJ1dCBjb25ncmF0cyBvbiB0aGlua2luZyB0byBkZWNvZGUgdGhpcyEpDQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwDQoxMTExMTExMTExMQ0KMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyDQozMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NA0KNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2DQo3Nzc3Nzc3Nzc3Nzc3Nw0KODgNCjk5OTk5OTk5OTk5OQ0KMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwDQoxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMQ0KMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzDQo0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTUNCjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2DQo3Nzc3Nzc3Nzc3Nw0KODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODgNCjkNCkFwcGxlIEluYy4gV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgKG5vdCByZWFsbHkgLSBmYWtlIFBsYXlGYWIgZXhhbXBsZSwgYnV0IGNvbmdyYXRzIG9uIHRoaW5raW5nIHRvIGRlY29kZSB0aGlzISkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDANCjExMTExMTExMTExDQoyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzDQo0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTUNCjY2NjY2NjY2NjY2NjYNCjc3Nzc3Nzc3Nzc3Nzc3DQo4OA0KOTk5OTk5OTk5OTk5DQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDANCjExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExDQoyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyDQozMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NA0KNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYNCjc3Nzc3Nzc3Nzc3DQo4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OA0KOQ0KQXBwbGUgSW5jLiBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9ucyBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAobm90IHJlYWxseSAtIGZha2UgUGxheUZhYiBleGFtcGxlLCBidXQgY29uZ3JhdHMgb24gdGhpbmtpbmcgdG8gZGVjb2RlIHRoaXMhKQ0KMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3Nzc3NzcNCjg4DQo5OTk5OTk5OTk5OTkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3NzcNCjg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4DQo5DQpBcHBsZSBJbmMuIFdvcmxkd2lkZSBEZXZlbG9wZXIgUmVsYXRpb25zIENlcnRpZmljYXRpb24gQXV0aG9yaXR5IChub3QgcmVhbGx5IC0gZmFrZSBQbGF5RmFiIGV4YW1wbGUsIGJ1dCBjb25ncmF0cyBvbiB0aGlua2luZyB0byBkZWNvZGUgdGhpcyEpDQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\",\n  \"CurrencyCode\": \"GBP\",\n  \"PurchasePrice\": 199\n}"
+		},
+		{
+			"id": "client-WriteCharacterEvent",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/WriteCharacterEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WriteCharacterEvent",
+			"description": "Writes a character-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/WriteCharacterEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"CharacterId\": Unique PlayFab assigned ID for a specific character owned by a user\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of now in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"CharacterId\": \"975378\",\n  \"EventName\": \"CharacterLevelUpEvent\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"Level\": \"10\",\n  \"Exp\": \"55\"\n}"
+		},
+		{
+			"id": "client-WritePlayerEvent",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/WritePlayerEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WritePlayerEvent",
+			"description": "Writes a player-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/WritePlayerEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of 'now' in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"EventName\": \"ForumPostEvent\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"Subject\": \"My First Post\",\n  \"Body\": \"This is my awesome post.\"\n}"
+		},
+		{
+			"id": "client-WriteTitleEvent",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/WriteTitleEvent",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.13.160411",
+			"dataMode": "raw",
+			"name": "WriteTitleEvent",
+			"description": "Writes a title-based event into PlayStream.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/WriteTitleEvent\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"EventName\": The name of this event. This field is alphanumeric and at most 64 characters long. It is internally namespaced down onto the calling title.\n\n\"Timestamp\": The time (in UTC) associated with this event. If omitted, a timestamp of now in UTC will be applied.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"EventName\": \"ClientUpdated\",\n  \"Timestamp\": \"2014-03-07T00:00:00Z\",\n  \"NewVersion\": \"1.4.50\"\n}"
 		}
 	]
 }
