@@ -157,6 +157,7 @@
 				"server-ReportPlayer",
 				"server-RevokeInventoryItem",
 				"server-SendPushNotification",
+				"server-SetGameServerInstanceData",
 				"server-SetGameServerInstanceState",
 				"server-SetPublisherData",
 				"server-SetTitleData",
@@ -2082,6 +2083,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"Recipient\": \"F8763A987E\",\n  \"Message\": \"You have been attacked! Go defend your base!\"\n}"
+		},
+		{
+			"id": "server-SetGameServerInstanceData",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/SetGameServerInstanceData",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.18.160606",
+			"dataMode": "raw",
+			"name": "SetGameServerInstanceData",
+			"description": "Sets the custom data of the indicated Game Server Instance\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/SetGameServerInstanceData\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"LobbyId\": Unique identifier of the Game Instance to be updated.\n\n\"GameServerData\": Custom data to set for the specified game server instance.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\"LobbyId\": \"String\",\"GameServerData\": \"String\"}"
 		},
 		{
 			"id": "server-SetGameServerInstanceState",
