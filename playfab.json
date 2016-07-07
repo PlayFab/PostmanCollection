@@ -3038,7 +3038,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
-			"rawModeData": "{\n  \"PlayFabId\": \"4027527BF22653D1\",\n  \"InfoRequestParameters\": {\n    \"GetUserAccountInfo\": false,\n    \"GetUserInventory\": false,\n    \"GetUserVirtualCurrency\": false,\n    \"GetUserData\": true,\n    \"UserDataKeys\": [\n      \"preferences\",\n      \"progress\"\n    ],\n    \"GetUserReadOnlyData\": true,\n    \"GetCharacterInventories\": false,\n    \"GetCharacterList\": false,\n    \"GetTitleData\": false,\n    \"GetPlayerStatistics\": true\n  }\n}"
+			"rawModeData": "{\n  \"PlayFabId\": \"4027527BF22653D1\",\n  \"InfoRequestParameters\": {\n    \"GetUserAccountInfo\": true,\n    \"GetUserInventory\": false,\n    \"GetUserVirtualCurrency\": true,\n    \"GetUserData\": true,\n    \"UserDataKeys\": [\n      \"preferences\",\n      \"progress\"\n    ],\n    \"GetUserReadOnlyData\": false,\n    \"GetCharacterInventories\": false,\n    \"GetCharacterList\": false,\n    \"GetTitleData\": false,\n    \"GetPlayerStatistics\": false\n  }\n}"
 		},
 		{
 			"id": "client-GetPlayerStatisticVersions",
