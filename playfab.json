@@ -785,7 +785,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
-			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
+			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\",\n      \"Data\": {\n        \"Equipped\": \"True\",\n        \"Slot\": \"Head\"\n      }\n    }\n  ]\n}"
 		},
 		{
 			"id": "admin-IncrementPlayerStatisticVersion",
@@ -1949,7 +1949,7 @@
 			"descriptionFormat": "html",
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
-			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\"\n    }\n  ]\n}"
+			"rawModeData": "{\n  \"CatalogVersion\": \"5\",\n  \"ItemGrants\": [\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_1\",\n      \"Annotation\": \"Entered Level 2\"\n    },\n    {\n      \"PlayFabId\": \"20394883\",\n      \"ItemId\": \"shield_level_2\",\n      \"Annotation\": \"Entered Level 2\",\n      \"Data\": {\n        \"Equipped\": \"True\",\n        \"Slot\": \"Head\"\n      }\n    }\n  ]\n}"
 		},
 		{
 			"id": "server-LogEvent",
