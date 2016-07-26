@@ -198,6 +198,7 @@
 
 				"client-AcceptTrade",
 				"client-AddFriend",
+				"client-AddGenericID",
 				"client-AddSharedGroupMembers",
 				"client-AddUserVirtualCurrency",
 				"client-AddUsernamePassword",
@@ -232,6 +233,7 @@
 				"client-GetPhotonAuthenticationToken",
 				"client-GetPlayFabIDsFromFacebookIDs",
 				"client-GetPlayFabIDsFromGameCenterIDs",
+				"client-GetPlayFabIDsFromGenericIDs",
 				"client-GetPlayFabIDsFromGoogleIDs",
 				"client-GetPlayFabIDsFromKongregateIDs",
 				"client-GetPlayFabIDsFromSteamIDs",
@@ -284,6 +286,7 @@
 				"client-RegisterForIOSPushNotification",
 				"client-RegisterPlayFabUser",
 				"client-RemoveFriend",
+				"client-RemoveGenericID",
 				"client-RemoveSharedGroupMembers",
 				"client-ReportPlayer",
 				"client-RestoreIOSPurchases",
@@ -2528,6 +2531,20 @@
 			"rawModeData": "{\n  \"FriendPlayFabId\": \"29837799\"\n}"
 		},
 		{
+			"id": "client-AddGenericID",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/AddGenericID",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "AddGenericID",
+			"description": "Adds the specified generic service identifier to the player's PlayFab account. This is designed to allow for a PlayFab ID lookup of any arbitrary service identifier a title wants to add. This identifier should never be used as authentication credentials, as the intent is that it is easily accessible by other players.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/AddGenericID\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"GenericId\": Generic service identifier to add to the player account.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"GenericId\": {\n    \"ServiceName\": \"BigBizSocial\",\n    \"UserId\": \"1234567890\"\n  }\n}"
+		},
+		{
 			"id": "client-AddSharedGroupMembers",
 			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Client/AddSharedGroupMembers",
@@ -3002,6 +3019,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"GameCenterIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
+		},
+		{
+			"id": "client-GetPlayFabIDsFromGenericIDs",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayFabIDsFromGenericIDs",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayFabIDsFromGenericIDs",
+			"description": "Retrieves the unique PlayFab identifiers for the given set of generic service identifiers. A generic identifier is the service name plus the service-specific ID for the player, as specified by the title when the generic identifier was added to the player account.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetPlayFabIDsFromGenericIDs\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"GenericIDs\": Array of unique generic service identifiers for which the title needs to get PlayFab identifiers. Currently limited to a maximum of 10 in a single request.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"GenericIDs\": [\n    {\n      \"ServiceName\": \"BigBizSocial\",\n      \"UserId\": \"1234567890\"\n    },\n    {\n      \"ServiceName\": \"VeeCeeMe\",\n      \"UserId\": \"og5igh85gf43gf\"\n    }\n  ]\n}"
 		},
 		{
 			"id": "client-GetPlayFabIDsFromGoogleIDs",
@@ -3730,6 +3761,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"FriendPlayFabId\": \"29837799\"\n}"
+		},
+		{
+			"id": "client-RemoveGenericID",
+			"headers": "Content-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/RemoveGenericID",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "RemoveGenericID",
+			"description": "Removes the specified generic service identifier from the player's PlayFab account.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/RemoveGenericID\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any sign in operation.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"GenericId\": Generic service identifier to be removed from the player.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"GenericId\": {\n    \"ServiceName\": \"BigBizSocial\",\n    \"UserId\": \"1234567890\"\n  }\n}"
 		},
 		{
 			"id": "client-RemoveSharedGroupMembers",
