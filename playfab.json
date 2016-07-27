@@ -18,6 +18,7 @@
 				"admin-CreatePlayerStatisticDefinition",
 				"admin-DeleteContent",
 				"admin-DeleteUsers",
+				"admin-GetAllSegments",
 				"admin-GetCatalogItems",
 				"admin-GetCloudScriptRevision",
 				"admin-GetCloudScriptVersions",
@@ -26,8 +27,10 @@
 				"admin-GetDataReport",
 				"admin-GetMatchmakerGameInfo",
 				"admin-GetMatchmakerGameModes",
+				"admin-GetPlayerSegments",
 				"admin-GetPlayerStatisticDefinitions",
 				"admin-GetPlayerStatisticVersions",
+				"admin-GetPlayersInSegment",
 				"admin-GetPublisherData",
 				"admin-GetRandomResultTables",
 				"admin-GetServerBuildInfo",
@@ -113,6 +116,7 @@
 				"server-DeleteUsers",
 				"server-EvaluateRandomResultTable",
 				"server-ExecuteCloudScript",
+				"server-GetAllSegments",
 				"server-GetAllUsersCharacters",
 				"server-GetCatalogItems",
 				"server-GetCharacterData",
@@ -129,8 +133,10 @@
 				"server-GetPlayFabIDsFromFacebookIDs",
 				"server-GetPlayFabIDsFromSteamIDs",
 				"server-GetPlayerCombinedInfo",
+				"server-GetPlayerSegments",
 				"server-GetPlayerStatisticVersions",
 				"server-GetPlayerStatistics",
+				"server-GetPlayersInSegment",
 				"server-GetPublisherData",
 				"server-GetSharedGroupData",
 				"server-GetTitleData",
@@ -240,6 +246,7 @@
 				"client-GetPlayFabIDsFromSteamIDs",
 				"client-GetPlayFabIDsFromTwitchIDs",
 				"client-GetPlayerCombinedInfo",
+				"client-GetPlayerSegments",
 				"client-GetPlayerStatisticVersions",
 				"client-GetPlayerStatistics",
 				"client-GetPlayerTrades",
@@ -429,6 +436,20 @@
 			"rawModeData": "{\n  \"PlayFabIds\": [\n    \"203945882\"\n  ],\n  \"TitleId\": \"aaa\"\n}"
 		},
 		{
+			"id": "admin-GetAllSegments",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetAllSegments",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetAllSegments",
+			"description": "Retrieves an array of player segment definitions. Results from this can be used in subsequent API calls such as GetPlayersInSegment which requires a Segment ID. While segment names can change the ID for that segment will not change.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetAllSegments\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{}"
+		},
+		{
 			"id": "admin-GetCatalogItems",
 			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetCatalogItems",
@@ -541,6 +562,20 @@
 			"rawModeData": "{\n  \"BuildVersion\": \"5.0.1\"\n}"
 		},
 		{
+			"id": "admin-GetPlayerSegments",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayerSegments",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayerSegments",
+			"description": "List all segments that a player currently belongs to at this moment in time.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetPlayerSegments\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"1337AA00\"\n}"
+		},
+		{
 			"id": "admin-GetPlayerStatisticDefinitions",
 			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayerStatisticDefinitions",
@@ -567,6 +602,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"StatisticName\": \"headshots\"\n}"
+		},
+		{
+			"id": "admin-GetPlayersInSegment",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayersInSegment",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayersInSegment",
+			"description": "Allows for paging through all players in a given segment. This API creates a snapshot of all player profiles that match the segment definition at the time of its creation and lives through the Total Seconds to Live, refreshing its life span on each subsequent use of the Continuation Token. Profiles that change during the course of paging will not be reflected in the results. AB Test segments are currently not supported by this operation.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetPlayersInSegment\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"SegmentId\": Unique identifier for this segment.\n\n\"SecondsToLive\": Number of seconds to keep the continuation token active. After token expiration it is not possible to continue paging results. Default is 300 (5 minutes). Maximum is 1,800 (30 minutes).\n\n\"MaxBatchSize\": Maximum number of profiles to load. Default is 1,000. Maximum is 10,000.\n\n\"ContinuationToken\": Continuation token if retrieving subsequent pages of results.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"SegmentId\": \"1337AA00\",\n  \"SecondsToLive\": 5,\n  \"MaxBatchSize\": 500\n}"
 		},
 		{
 			"id": "admin-GetPublisherData",
@@ -1481,6 +1530,20 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"1337D00D\",\n  \"FunctionName\": \"levelCompleted\",\n  \"FunctionParameter\": {\n    \"level\": 3,\n    \"points\": 400\n  },\n  \"RevisionSelection\": \"Live\",\n  \"GeneratePlayStreamEvent\": true\n}"
 		},
 		{
+			"id": "server-GetAllSegments",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetAllSegments",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetAllSegments",
+			"description": "Retrieves an array of player segment definitions. Results from this can be used in subsequent API calls such as GetPlayersInSegment which requires a Segment ID. While segment names can change the ID for that segment will not change.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetAllSegments\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{}"
+		},
+		{
 			"id": "server-GetAllUsersCharacters",
 			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetAllUsersCharacters",
@@ -1705,6 +1768,20 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"4027527BF22653D1\",\n  \"InfoRequestParameters\": {\n    \"GetUserAccountInfo\": true,\n    \"GetUserInventory\": false,\n    \"GetUserVirtualCurrency\": true,\n    \"GetUserData\": true,\n    \"UserDataKeys\": [\n      \"preferences\",\n      \"progress\"\n    ],\n    \"GetUserReadOnlyData\": false,\n    \"GetCharacterInventories\": false,\n    \"GetCharacterList\": false,\n    \"GetTitleData\": false,\n    \"GetPlayerStatistics\": false\n  }\n}"
 		},
 		{
+			"id": "server-GetPlayerSegments",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayerSegments",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayerSegments",
+			"description": "List all segments that a player currently belongs to at this moment in time.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetPlayerSegments\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"1337AA00\"\n}"
+		},
+		{
 			"id": "server-GetPlayerStatisticVersions",
 			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayerStatisticVersions",
@@ -1731,6 +1808,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"PlayFabId\": \"621EF2023753444\",\n  \"StatisticNames\": [\n    \"Points\",\n    \"Wins\"\n  ]\n}"
+		},
+		{
+			"id": "server-GetPlayersInSegment",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayersInSegment",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayersInSegment",
+			"description": "Allows for paging through all players in a given segment. This API creates a snapshot of all player profiles that match the segment definition at the time of its creation and lives through the Total Seconds to Live, refreshing its life span on each subsequent use of the Continuation Token. Profiles that change during the course of paging will not be reflected in the results. AB Test segments are currently not supported by this operation.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetPlayersInSegment\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"SegmentId\": Unique identifier for this segment.\n\n\"SecondsToLive\": Number of seconds to keep the continuation token active. After token expiration it is not possible to continue paging results. Default is 300 (5 minutes). Maximum is 1,800 (30 minutes).\n\n\"MaxBatchSize\": Maximum number of profiles to load. Default is 1,000. Maximum is 10,000.\n\n\"ContinuationToken\": Continuation token if retrieving subsequent pages of results.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"SegmentId\": \"1337AA00\",\n  \"SecondsToLive\": 5,\n  \"MaxBatchSize\": 500\n}"
 		},
 		{
 			"id": "server-GetPublisherData",
@@ -3118,6 +3209,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"PlayFabId\": \"4027527BF22653D1\",\n  \"InfoRequestParameters\": {\n    \"GetUserAccountInfo\": true,\n    \"GetUserInventory\": false,\n    \"GetUserVirtualCurrency\": true,\n    \"GetUserData\": true,\n    \"UserDataKeys\": [\n      \"preferences\",\n      \"progress\"\n    ],\n    \"GetUserReadOnlyData\": false,\n    \"GetCharacterInventories\": false,\n    \"GetCharacterList\": false,\n    \"GetTitleData\": false,\n    \"GetPlayerStatistics\": false\n  }\n}"
+		},
+		{
+			"id": "client-GetPlayerSegments",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayerSegments",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayerSegments",
+			"description": "List all segments that a player currently belongs to at this moment in time.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetPlayerSegments\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{}"
 		},
 		{
 			"id": "client-GetPlayerStatisticVersions",
