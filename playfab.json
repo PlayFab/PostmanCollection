@@ -128,6 +128,7 @@
 				"server-GetLeaderboardForUserCharacters",
 				"server-GetPlayFabIDsFromFacebookIDs",
 				"server-GetPlayFabIDsFromSteamIDs",
+				"server-GetPlayerCombinedInfo",
 				"server-GetPlayerStatisticVersions",
 				"server-GetPlayerStatistics",
 				"server-GetPublisherData",
@@ -1688,6 +1689,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"SteamStringIDs\": [\n    \"857498576495\",\n    \"759374651209\"\n  ]\n}"
+		},
+		{
+			"id": "server-GetPlayerCombinedInfo",
+			"headers": "Content-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayerCombinedInfo",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK-0.23.160725",
+			"dataMode": "raw",
+			"name": "GetPlayerCombinedInfo",
+			"description": "Returns whatever info is requested in the response for the user. Note that PII (like email address, facebook id)             may be returned. All parameters default to false.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetPlayerCombinedInfo\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in the dashboard of your title (https://developer.playfab.com/title/properties/{{titleId}})\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": PlayFabId of the user whose data will be returned\n\n\"InfoRequestParameters\": Flags for which pieces of info to return for the user.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"4027527BF22653D1\",\n  \"InfoRequestParameters\": {\n    \"GetUserAccountInfo\": true,\n    \"GetUserInventory\": false,\n    \"GetUserVirtualCurrency\": true,\n    \"GetUserData\": true,\n    \"UserDataKeys\": [\n      \"preferences\",\n      \"progress\"\n    ],\n    \"GetUserReadOnlyData\": false,\n    \"GetCharacterInventories\": false,\n    \"GetCharacterList\": false,\n    \"GetTitleData\": false,\n    \"GetPlayerStatistics\": false\n  }\n}"
 		},
 		{
 			"id": "server-GetPlayerStatisticVersions",
