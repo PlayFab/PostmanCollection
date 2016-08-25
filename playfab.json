@@ -12,6 +12,7 @@
 			"order": [
 
 				"admin-AddNews",
+				"admin-AddPlayerTag",
 				"admin-AddServerBuild",
 				"admin-AddUserVirtualCurrency",
 				"admin-AddVirtualCurrencyTypes",
@@ -32,6 +33,7 @@
 				"admin-GetPlayerSegments",
 				"admin-GetPlayerStatisticDefinitions",
 				"admin-GetPlayerStatisticVersions",
+				"admin-GetPlayerTags",
 				"admin-GetPlayersInSegment",
 				"admin-GetPublisherData",
 				"admin-GetRandomResultTables",
@@ -55,6 +57,7 @@
 				"admin-ListVirtualCurrencyTypes",
 				"admin-ModifyMatchmakerGameModes",
 				"admin-ModifyServerBuild",
+				"admin-RemovePlayerTag",
 				"admin-RemoveServerBuild",
 				"admin-RemoveVirtualCurrencyTypes",
 				"admin-ResetCharacterStatistics",
@@ -107,6 +110,7 @@
 			"order": [
 
 				"server-AddCharacterVirtualCurrency",
+				"server-AddPlayerTag",
 				"server-AddSharedGroupMembers",
 				"server-AddUserVirtualCurrency",
 				"server-AuthenticateSessionTicket",
@@ -139,6 +143,7 @@
 				"server-GetPlayerSegments",
 				"server-GetPlayerStatisticVersions",
 				"server-GetPlayerStatistics",
+				"server-GetPlayerTags",
 				"server-GetPlayersInSegment",
 				"server-GetPublisherData",
 				"server-GetRandomResultTables",
@@ -168,6 +173,7 @@
 				"server-NotifyMatchmakerPlayerLeft",
 				"server-RedeemCoupon",
 				"server-RedeemMatchmakerTicket",
+				"server-RemovePlayerTag",
 				"server-RemoveSharedGroupMembers",
 				"server-ReportPlayer",
 				"server-RevokeAllBansForUser",
@@ -255,6 +261,7 @@
 				"client-GetPlayerSegments",
 				"client-GetPlayerStatisticVersions",
 				"client-GetPlayerStatistics",
+				"client-GetPlayerTags",
 				"client-GetPlayerTrades",
 				"client-GetPublisherData",
 				"client-GetPurchase",
@@ -354,6 +361,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"Timestamp\": \"2014-04-06T00:00:00Z\",\n  \"Title\": \"News of the Day\",\n  \"Body\": \"<b>We have a new object to buy!</b>\"\n}"
+		},
+		{
+			"id": "admin-AddPlayerTag",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/AddPlayerTag",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "AddPlayerTag",
+			"description": "Adds a given tag to a player profile. The tag's namespace is automatically generated based on the source of the tag.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/AddPlayerTag\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"TagName\": Unique tag for player profile.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"TagName\": \"MostKilled\"\n}"
 		},
 		{
 			"id": "admin-AddServerBuild",
@@ -634,6 +655,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"StatisticName\": \"headshots\"\n}"
+		},
+		{
+			"id": "admin-GetPlayerTags",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/GetPlayerTags",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "GetPlayerTags",
+			"description": "Get all tags with a given Namespace (optional) from a player profile.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/GetPlayerTags\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"Namespace\": Optional namespace to filter results by\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"Namespace\": \"title.AAA\"\n}"
 		},
 		{
 			"id": "admin-GetPlayersInSegment",
@@ -956,6 +991,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-adminFolder",
 			"rawModeData": "{\n  \"BuildId\": \"5.0.1\",\n  \"Timestamp\": \"2014-03-24T00:00:00Z\",\n  \"ActiveRegions\": [\n    \"USCentral\",\n    \"EUWest\"\n  ],\n  \"MaxGamesPerHost\": 5,\n  \"MinFreeGameSlots\": 2,\n  \"ExecutablePath\": \"\\ShooterGame\\Binaries\\Win64\\ShooterGameServer.exe\",\n  \"Comment\": \"Testing new IAP methods\"\n}"
+		},
+		{
+			"id": "admin-RemovePlayerTag",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Admin/RemovePlayerTag",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "RemovePlayerTag",
+			"description": "Remove a given tag from a player profile. The tag's namespace is automatically generated based on the source of the tag.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/RemovePlayerTag\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"TagName\": Unique tag for player profile.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-adminFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"TagName\": \"MostKilled\"\n}"
 		},
 		{
 			"id": "admin-RemoveServerBuild",
@@ -1464,6 +1513,20 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"CharacterId\": \"23424524523\",\n  \"VirtualCurrency\": \"GC\",\n  \"Amount\": 100\n}"
 		},
 		{
+			"id": "server-AddPlayerTag",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/AddPlayerTag",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "AddPlayerTag",
+			"description": "Adds a given tag to a player profile. The tag's namespace is automatically generated based on the source of the tag.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/AddPlayerTag\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"TagName\": Unique tag for player profile.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"TagName\": \"MostKilled\"\n}"
+		},
+		{
 			"id": "server-AddSharedGroupMembers",
 			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/AddSharedGroupMembers",
@@ -1912,6 +1975,20 @@
 			"rawModeData": "{\n  \"PlayFabId\": \"621EF2023753444\",\n  \"StatisticNames\": [\n    \"Points\",\n    \"Wins\"\n  ]\n}"
 		},
 		{
+			"id": "server-GetPlayerTags",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayerTags",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "GetPlayerTags",
+			"description": "Get all tags with a given Namespace (optional) from a player profile.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetPlayerTags\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"Namespace\": Optional namespace to filter results by\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"Namespace\": \"title.AAA\"\n}"
+		},
+		{
 			"id": "server-GetPlayersInSegment",
 			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
 			"url": "https://{{TitleId}}.playfabapi.com/Server/GetPlayersInSegment",
@@ -2316,6 +2393,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-serverFolder",
 			"rawModeData": "{\n  \"Ticket\": \"2398349939a03499bc\",\n  \"LobbyId\": \"2353\"\n}"
+		},
+		{
+			"id": "server-RemovePlayerTag",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Server/RemovePlayerTag",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "RemovePlayerTag",
+			"description": "Remove a given tag from a player profile. The tag's namespace is automatically generated based on the source of the tag.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/RemovePlayerTag\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"TagName\": Unique tag for player profile.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-serverFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"TagName\": \"MostKilled\"\n}"
 		},
 		{
 			"id": "server-RemoveSharedGroupMembers",
@@ -3423,6 +3514,20 @@
 			"currentHelper": "normal",
 			"folder": "PlayFabPostmanSDK-clientFolder",
 			"rawModeData": "{\n  \"StatisticNames\": [\n    \"Points\",\n    \"Wins\"\n  ]\n}"
+		},
+		{
+			"id": "client-GetPlayerTags",
+			"headers": "X-PlayFabSDK: PostmanCollection-0.26.160822\nContent-Type: application/json\nX-Authentication: {{SessionTicket}}\n",
+			"url": "https://{{TitleId}}.playfabapi.com/Client/GetPlayerTags",
+			"method": "POST",
+			"collectionId": "PlayFabPostmanSDK",
+			"dataMode": "raw",
+			"name": "GetPlayerTags",
+			"description": "Get all tags with a given Namespace (optional) from a player profile.\n\nApi Documentation: https://api.playfab.com/Documentation/Client/method/GetPlayerTags\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SessionTicket\" - The string returned as \"SessionTicket\" in response to any Login API.\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"Namespace\": Optional namespace to filter results by\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+			"descriptionFormat": "html",
+			"currentHelper": "normal",
+			"folder": "PlayFabPostmanSDK-clientFolder",
+			"rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"Namespace\": \"title.AAA\"\n}"
 		},
 		{
 			"id": "client-GetPlayerTrades",
