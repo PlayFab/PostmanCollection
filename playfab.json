@@ -122,7 +122,6 @@
                 "server-DeleteCharacterFromUser",
                 "server-DeleteSharedGroup",
                 "server-DeleteUsers",
-                "server-DeregisterGame",
                 "server-EvaluateRandomResultTable",
                 "server-ExecuteCloudScript",
                 "server-GetAllActionGroups",
@@ -176,7 +175,6 @@
                 "server-NotifyMatchmakerPlayerLeft",
                 "server-RedeemCoupon",
                 "server-RedeemMatchmakerTicket",
-                "server-RegisterGame",
                 "server-RemovePlayerTag",
                 "server-RemoveSharedGroupMembers",
                 "server-ReportPlayer",
@@ -1685,20 +1683,6 @@
             "rawModeData": "{\n  \"PlayFabIds\": [\n    \"203945882\"\n  ],\n  \"TitleId\": \"aaa\"\n}"
         },
         {
-            "id": "server-DeregisterGame",
-            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
-            "url": "https://{{TitleId}}.playfabapi.com/Server/DeregisterGame",
-            "method": "POST",
-            "collectionId": "PlayFabPostmanSDK",
-            "dataMode": "raw",
-            "name": "DeregisterGame",
-            "description": "Inform the matchmaker that a Game Server Instance is removed.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/DeregisterGame\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"LobbyId\": Unique identifier for the Game Server Instance that is being deregistered.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-            "descriptionFormat": "html",
-            "currentHelper": "normal",
-            "folder": "PlayFabPostmanSDK-serverFolder",
-            "rawModeData": "{\n  \"LobbyId\": \"8285313\"\n}"
-        },
-        {
             "id": "server-EvaluateRandomResultTable",
             "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
             "url": "https://{{TitleId}}.playfabapi.com/Server/EvaluateRandomResultTable",
@@ -2439,20 +2423,6 @@
             "currentHelper": "normal",
             "folder": "PlayFabPostmanSDK-serverFolder",
             "rawModeData": "{\n  \"Ticket\": \"2398349939a03499bc\",\n  \"LobbyId\": \"2353\"\n}"
-        },
-        {
-            "id": "server-RegisterGame",
-            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
-            "url": "https://{{TitleId}}.playfabapi.com/Server/RegisterGame",
-            "method": "POST",
-            "collectionId": "PlayFabPostmanSDK",
-            "dataMode": "raw",
-            "name": "RegisterGame",
-            "description": "Inform the matchmaker that a new Game Server Instance is added.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/RegisterGame\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"ServerHost\": IP address of the Game Server Instance.\n\n\"ServerPort\": Port number for communication with the Game Server Instance.\n\n\"Build\": Unique identifier of the build running on the Game Server Instance.\n\n\"Region\": Unique identifier of the build running on the Game Server Instance.\n\n\"GameMode\": Unique identifier of the build running on the Game Server Instance.\n\n\"Tags\": Tags for the Game Server Instance\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
-            "descriptionFormat": "html",
-            "currentHelper": "normal",
-            "folder": "PlayFabPostmanSDK-serverFolder",
-            "rawModeData": "{\n  \"ServerHost\": \"118.129.31.244\",\n  \"ServerPort\": \"9984\",\n  \"Build\": \"11_034234.13\",\n  \"Region\": \"USEast\",\n  \"GameMode\": \"FreeForAll\",\n  \"Tags\": {\n    \"level_cap\": \"high\",\n    \"no_smoking\": \"1\"\n  }\n}"
         },
         {
             "id": "server-RemovePlayerTag",
