@@ -58,12 +58,14 @@
                 "admin-ListVirtualCurrencyTypes",
                 "admin-ModifyMatchmakerGameModes",
                 "admin-ModifyServerBuild",
+                "admin-RefundPurchase",
                 "admin-RemovePlayerTag",
                 "admin-RemoveServerBuild",
                 "admin-RemoveVirtualCurrencyTypes",
                 "admin-ResetCharacterStatistics",
                 "admin-ResetUserStatistics",
                 "admin-ResetUsers",
+                "admin-ResolvePurchaseDispute",
                 "admin-RevokeAllBansForUser",
                 "admin-RevokeBans",
                 "admin-RevokeInventoryItem",
@@ -1011,6 +1013,20 @@
             "rawModeData": "{\n  \"BuildId\": \"5.0.1\",\n  \"Timestamp\": \"2014-03-24T00:00:00Z\",\n  \"ActiveRegions\": [\n    \"USCentral\",\n    \"EUWest\"\n  ],\n  \"MaxGamesPerHost\": 5,\n  \"MinFreeGameSlots\": 2,\n  \"ExecutablePath\": \"\\ShooterGame\\Binaries\\Win64\\ShooterGameServer.exe\",\n  \"Comment\": \"Testing new IAP methods\"\n}"
         },
         {
+            "id": "admin-RefundPurchase",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Admin/RefundPurchase",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "RefundPurchase",
+            "description": "Attempts to process an order refund through the original real money payment provider.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/RefundPurchase\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"OrderId\": Unique order ID for the purchase in question.\n\n\"Reason\": Reason for refund. In the case of Facebook this must match one of their refund or dispute resolution enums (See: https://developers.facebook.com/docs/payments/implementation-guide/handling-disputes-refunds)\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-adminFolder",
+            "rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"OrderId\": \"B456AE0\",\n  \"Reason\": \"Customer Request\"\n}"
+        },
+        {
             "id": "admin-RemovePlayerTag",
             "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
             "url": "https://{{TitleId}}.playfabapi.com/Admin/RemovePlayerTag",
@@ -1093,6 +1109,20 @@
             "currentHelper": "normal",
             "folder": "PlayFabPostmanSDK-adminFolder",
             "rawModeData": "{\n  \"Users\": [\n    {\n      \"Username\": \"username\",\n      \"Password\": \"password\"\n    }\n  ]\n}"
+        },
+        {
+            "id": "admin-ResolvePurchaseDispute",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Admin/ResolvePurchaseDispute",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "ResolvePurchaseDispute",
+            "description": "Attempts to resolve a dispute with the original order's payment provider.\n\nApi Documentation: https://api.playfab.com/Documentation/Admin/method/ResolvePurchaseDispute\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\n\"OrderId\": Unique order ID for the purchase in question.\n\n\"Reason\": Reason for refund. In the case of Facebook this must match one of their refund or dispute resolution enums (See: https://developers.facebook.com/docs/payments/implementation-guide/handling-disputes-refunds)\n\n\"Outcome\": Enum for the desired purchase result state after notifying the payment provider. Valid values are Revoke, Reinstate and Manual. Manual will cause no change to the order state.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-adminFolder",
+            "rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"OrderId\": \"B456AE0\",\n  \"Reason\": \"Customer Request\",\n  \"Outcome\": \"Reinstate\"\n}"
         },
         {
             "id": "admin-RevokeAllBansForUser",
