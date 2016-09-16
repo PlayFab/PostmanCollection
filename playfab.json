@@ -113,6 +113,7 @@
             "order": [
 
                 "server-AddCharacterVirtualCurrency",
+                "server-AddFriend",
                 "server-AddPlayerTag",
                 "server-AddSharedGroupMembers",
                 "server-AddUserVirtualCurrency",
@@ -138,6 +139,8 @@
                 "server-GetCharacterReadOnlyData",
                 "server-GetCharacterStatistics",
                 "server-GetContentDownloadUrl",
+                "server-GetFriendLeaderboard",
+                "server-GetFriendsList",
                 "server-GetLeaderboard",
                 "server-GetLeaderboardAroundCharacter",
                 "server-GetLeaderboardAroundUser",
@@ -179,6 +182,7 @@
                 "server-RedeemCoupon",
                 "server-RedeemMatchmakerTicket",
                 "server-RegisterGame",
+                "server-RemoveFriend",
                 "server-RemovePlayerTag",
                 "server-RemoveSharedGroupMembers",
                 "server-ReportPlayer",
@@ -1561,6 +1565,20 @@
             "rawModeData": "{\n  \"PlayFabId\": \"20394883\",\n  \"CharacterId\": \"23424524523\",\n  \"VirtualCurrency\": \"GC\",\n  \"Amount\": 100\n}"
         },
         {
+            "id": "server-AddFriend",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/AddFriend",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "AddFriend",
+            "description": "Adds the Friend user to the friendlist of the user with PlayFabId. At least one of FriendPlayFabId,FriendUsername,FriendEmail, or FriendTitleDisplayName should be initialized.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/AddFriend\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": PlayFab identifier of the player to add a new friend.\n\n\"FriendPlayFabId\": The PlayFab identifier of the user being added.\n\n\"FriendUsername\": The PlayFab username of the user being added\n\n\"FriendEmail\": Email address of the user being added.\n\n\"FriendTitleDisplayName\": Title-specific display name of the user to being added.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"PlayFabId\": \"10931252888739651331\",\n  \"FriendPlayFabId\": \"20394883\"\n}"
+        },
+        {
             "id": "server-AddPlayerTag",
             "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
             "url": "https://{{TitleId}}.playfabapi.com/Server/AddPlayerTag",
@@ -1909,6 +1927,34 @@
             "currentHelper": "normal",
             "folder": "PlayFabPostmanSDK-serverFolder",
             "rawModeData": "{\n  \"Key\": \"images/sword_icon.png\"\n}"
+        },
+        {
+            "id": "server-GetFriendLeaderboard",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/GetFriendLeaderboard",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "GetFriendLeaderboard",
+            "description": "Retrieves a list of ranked friends of the given player for the given statistic, starting from the indicated point in the leaderboard\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetFriendLeaderboard\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": The player whose friend leaderboard to get\n\n\"StatisticName\": Statistic used to rank friends for this leaderboard.\n\n\"StartPosition\": Position in the leaderboard to start this listing (defaults to the first entry).\n\n\"MaxResultsCount\": Maximum number of entries to retrieve.\n\n\"IncludeSteamFriends\": Indicates whether Steam service friends should be included in the response. Default is true.\n\n\"IncludeFacebookFriends\": Indicates whether Facebook friends should be included in the response. Default is true.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"PlayFabId\": \"98092347523\",\n  \"StatisticName\": \"Kills\",\n  \"StartPosition\": 1258,\n  \"MaxResultsCount\": 20,\n  \"IncludeSteamFriends\": false\n}"
+        },
+        {
+            "id": "server-GetFriendsList",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/GetFriendsList",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "GetFriendsList",
+            "description": "Retrieves the current friends for the user with PlayFabId, constrained to users who have PlayFab accounts. Friends from linked accounts (Facebook, Steam) are also included. You may optionally exclude some linked services' friends.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/GetFriendsList\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"PlayFabId\": PlayFab identifier of the player whose friend list to get.\n\n\"IncludeSteamFriends\": Indicates whether Steam service friends should be included in the response. Default is true.\n\n\"IncludeFacebookFriends\": Indicates whether Facebook friends should be included in the response. Default is true.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"PlayFabId\": \"93798903892789754\",\n  \"IncludeSteamFriends\": true\n}"
         },
         {
             "id": "server-GetLeaderboard",
@@ -2483,6 +2529,20 @@
             "currentHelper": "normal",
             "folder": "PlayFabPostmanSDK-serverFolder",
             "rawModeData": "{\n  \"ServerHost\": \"118.129.31.244\",\n  \"ServerPort\": \"9984\",\n  \"Build\": \"11_034234.13\",\n  \"Region\": \"USEast\",\n  \"GameMode\": \"FreeForAll\",\n  \"Tags\": {\n    \"level_cap\": \"high\",\n    \"no_smoking\": \"1\"\n  }\n}"
+        },
+        {
+            "id": "server-RemoveFriend",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.28.160912\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/RemoveFriend",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "RemoveFriend",
+            "description": "Removes the specified friend from the the user's friend list\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/RemoveFriend\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"FriendPlayFabId\": PlayFab identifier of the friend account which is to be removed.\n\n\"PlayFabId\": Unique PlayFab assigned ID of the user on whom the operation will be performed.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"FriendPlayFabId\": \"29837799\",\n  \"PlayFabId\": \"1a46086aed40f142\"\n}"
         },
         {
             "id": "server-RemovePlayerTag",
