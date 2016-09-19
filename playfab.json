@@ -181,6 +181,7 @@
                 "server-NotifyMatchmakerPlayerLeft",
                 "server-RedeemCoupon",
                 "server-RedeemMatchmakerTicket",
+                "server-RefreshGameServerInstanceHeartbeat",
                 "server-RegisterGame",
                 "server-RemoveFriend",
                 "server-RemovePlayerTag",
@@ -192,6 +193,7 @@
                 "server-SendPushNotification",
                 "server-SetGameServerInstanceData",
                 "server-SetGameServerInstanceState",
+                "server-SetGameServerInstanceTags",
                 "server-SetPublisherData",
                 "server-SetTitleData",
                 "server-SetTitleInternalData",
@@ -2517,6 +2519,20 @@
             "rawModeData": "{\n  \"Ticket\": \"2398349939a03499bc\",\n  \"LobbyId\": \"2353\"\n}"
         },
         {
+            "id": "server-RefreshGameServerInstanceHeartbeat",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.29.160919\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/RefreshGameServerInstanceHeartbeat",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "RefreshGameServerInstanceHeartbeat",
+            "description": "Set the state of the indicated Game Server Instance. Also update the heartbeat for the instance.\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/RefreshGameServerInstanceHeartbeat\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"LobbyId\": Unique identifier of the Game Server Instance for which the heartbeat is updated.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"LobbyId\": \"29439584\"\n}"
+        },
+        {
             "id": "server-RegisterGame",
             "headers": "X-PlayFabSDK: PostmanCollection-0.29.160919\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
             "url": "https://{{TitleId}}.playfabapi.com/Server/RegisterGame",
@@ -2669,6 +2685,20 @@
             "currentHelper": "normal",
             "folder": "PlayFabPostmanSDK-serverFolder",
             "rawModeData": "{\n  \"LobbyId\": \"29439584\",\n  \"State\": \"Closed\"\n}"
+        },
+        {
+            "id": "server-SetGameServerInstanceTags",
+            "headers": "X-PlayFabSDK: PostmanCollection-0.29.160919\nContent-Type: application/json\nX-SecretKey: {{SecretKey}}\n",
+            "url": "https://{{TitleId}}.playfabapi.com/Server/SetGameServerInstanceTags",
+            "method": "POST",
+            "collectionId": "PlayFabPostmanSDK",
+            "dataMode": "raw",
+            "name": "SetGameServerInstanceTags",
+            "description": "Set custom tags for the specified Game Server Instance\n\nApi Documentation: https://api.playfab.com/Documentation/Server/method/SetGameServerInstanceTags\n\n**The following case-sensitive environment variables are required for this call:**\n\n\"TitleId\" - The Title Id of your game, available in the Game Manager (https://developer.playfab.com)\n\n\"SecretKey\" - The PlayFab API Secret Key, available in Game Manager for your title (https://developer.playfab.com/en-us/{{titleId}}/settings/credentials)\n\n**The body of this api-call should be proper json-format.  The api-body accepts the following case-sensitive parameters:**\n\n\"LobbyId\": Unique identifier of the Game Server Instance to be updated.\n\n\"Tags\": Tags to set for the specified Game Server Instance. Note that this is the complete list of tags to be associated with the Game Server Instance.\n\nTo set up an Environment, click the text next to the eye icon up top in Postman (it should say \"No environment\", if this is your first time using Postman). Select \"Manage environments\", then \"Add\". Type a name for your environment where it says \"New environment\", then enter each variable name above as the \"Key\", with the value as defined for each above.",
+            "descriptionFormat": "html",
+            "currentHelper": "normal",
+            "folder": "PlayFabPostmanSDK-serverFolder",
+            "rawModeData": "{\n  \"LobbyId\": \"29439584\",\n  \"Tags\": {\n    \"TagA\": \"123\",\n    \"TagB\": \"321\"\n  }\n}"
         },
         {
             "id": "server-SetPublisherData",
