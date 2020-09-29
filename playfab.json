@@ -10,6 +10,13 @@
 				"id": "b7114d52-8fee-497d-bb42-4b4d1446174c",
 				"type": "text/javascript",
 				"exec": [
+					"var autoTitleToken = pm.globals.get(\"PlayFab_AutoTitleToken\");",
+					"",
+					"if (autoTitleToken !== \"true\")",
+					"{",
+					"    return;",
+					"}",
+					"",
 					"var titleId = pm.environment.get(\"TitleId\");",
 					"var secretKey = pm.environment.get(\"SecretKey\");",
 					"",
