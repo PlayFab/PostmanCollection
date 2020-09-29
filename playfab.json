@@ -10,6 +10,10 @@
 				"id": "b7114d52-8fee-497d-bb42-4b4d1446174c",
 				"type": "text/javascript",
 				"exec": [
+					"// When enabled, the following script will ensure that the EntityToken environment",
+					"// variable always contains a valid title entity token. To enable the script, create",
+					"// a global variable named PlayFab_AutoTitleToken and set its value to true.",
+					"",
 					"var autoTitleToken = pm.globals.get(\"PlayFab_AutoTitleToken\");",
 					"",
 					"if (autoTitleToken !== \"true\")",
