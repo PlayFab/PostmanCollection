@@ -1,4 +1,4 @@
-# PlayFab Postman Collection README
+angellmartz234@outlook.com# PlayFab Postman Collection README
 
 
 ## 1. Overview:
